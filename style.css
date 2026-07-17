@@ -1,0 +1,314 @@
+:root {
+  --color-bg: #FAF7F1;
+  --color-card: #FFFFFF;
+  --color-green: #9CB48C;
+  --color-green-light: #EAF0E4;
+  --color-accent: #E8A798;
+  --color-text: #4A4640;
+  --color-text-sub: #8A8478;
+  --radius: 20px;
+  --shadow: 0 4px 16px rgba(154, 140, 110, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 60px;
+}
+
+.page {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ① キャッチコピー */
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-card);
+  box-shadow: var(--shadow);
+}
+
+.catch {
+  margin: 20px 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.lead {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+
+/* 共通カード */
+.card {
+  width: 100%;
+  padding: 24px 22px;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.card p {
+  margin: 0 0 12px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.section-plain {
+  width: 100%;
+}
+
+.section-title {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-green);
+  letter-spacing: 0.12em;
+}
+
+.section-note {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: var(--color-text-sub);
+  text-align: center;
+}
+
+.small-note {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--color-text-sub);
+}
+
+/* ③ おすすめ記事 */
+.featured {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 18px;
+  background: var(--color-green-light);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.7;
+  transition: transform 0.15s ease;
+}
+
+.featured:active {
+  transform: scale(0.98);
+}
+
+.featured-pin {
+  flex: 0 0 auto;
+}
+
+/* ④ 人気コンテンツ */
+.category-card {
+  width: 100%;
+  padding: 20px 22px;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+
+.category-card:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.chip-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip-list li {
+  padding: 5px 12px;
+  background: var(--color-green-light);
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.chip-list-center {
+  justify-content: center;
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+}
+
+/* coming soon（note記事ができたらリンク先を設定して外す） */
+.is-soon {
+  pointer-events: none;
+}
+
+.featured.is-soon,
+.more-link.is-soon {
+  opacity: 0.75;
+}
+
+.soon-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 10px;
+  background: var(--color-accent);
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* 箇条書き */
+.dot-list {
+  margin: 0 auto 16px;
+  padding: 0;
+  width: fit-content;
+  list-style: none;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.dot-list li::before {
+  content: "・";
+  color: var(--color-green);
+}
+
+/* リンクボタン */
+.link-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--color-green-light);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.15s ease;
+}
+
+.link-button:active {
+  transform: scale(0.98);
+}
+
+.link-icon {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.link-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.link-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.link-arrow {
+  flex: 0 0 auto;
+  color: var(--color-text-sub);
+  font-size: 18px;
+}
+
+/* ⑨ 家族紹介 */
+.family-img {
+  display: block;
+  width: 60%;
+  border-radius: 14px;
+  margin: 0 auto 14px;
+}
+
+.family-list {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.family-emoji {
+  display: inline-block;
+  width: 28px;
+}
+
+.family-note {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-sub);
+}
+
+/* フッター */
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--color-text-sub);
+}
