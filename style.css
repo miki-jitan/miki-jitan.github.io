@@ -156,6 +156,61 @@ body {
   font-weight: 700;
 }
 
+/* 記事リスト */
+.article-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-list + .sub-label {
+  margin-top: 18px;
+}
+
+.sub-label {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-green);
+  letter-spacing: 0.08em;
+}
+
+.article {
+  display: block;
+  padding: 11px 0;
+  border-bottom: 1px dashed #E6E1D6;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.article-list li:last-child .article {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.article-title {
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.article:hover .article-title {
+  color: var(--color-green);
+}
+
+.article-date {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--color-text-sub);
+}
+
+.coming-note {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: var(--color-text-sub);
+}
+
 .chip-list {
   margin: 0;
   padding: 0;
