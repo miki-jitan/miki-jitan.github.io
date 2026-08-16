@@ -283,6 +283,13 @@ body {
   color: var(--color-green);
 }
 
+/* LINEスタンプのプレビュー */
+.stamp-preview {
+  display: block;
+  width: 100%;
+  margin: 0 0 14px;
+}
+
 /* リンクボタン */
 .link-button {
   display: flex;
